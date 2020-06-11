@@ -1,0 +1,81 @@
+body {
+    height: 100%;
+    margin: 0;
+    top:0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.scriptfont {
+    font-family: 'Tangerine', cursive;
+    font-size: 3.5vw;
+    background-image:linear-gradient(0deg,#752201,#bf6e4e,#8c3310);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.monofont {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 1.3vw;
+    background-image:linear-gradient(0deg,#752201,#bf6e4e,#8c3310);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height:140%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.slideshow {
+	position: fixed;
+	top:0;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+}
+
+.mainContainer{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f0b7a1+0,8c3310+24,752201+54,d8aea4+74,bf6e4e+100 */
+    background: #f0b7a1; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f0b7a1 0%, #8c3310 24%, #752201 54%, #d8aea4 74%, #bf6e4e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #f0b7a1 0%,#8c3310 24%,#752201 54%,#d8aea4 74%,#bf6e4e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #f0b7a1 0%,#8c3310 24%,#752201 54%,#d8aea4 74%,#bf6e4e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', endColorstr='#bf6e4e',GradientType=0 ); /* IE6-9 */
+    opacity: .5;
+    background-repeat: no-repeat;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.containerText{
+    width:40%;
+    margin-top: 0;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.imageContainer > img {
+  position:relative;
+  left: 10%;
+  top: -5%;
+  width:100%;
+  margin-top: 0;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#container{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+
+
+@media screen and (max-height: 39em) {
+
+}
