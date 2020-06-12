@@ -1,4 +1,14 @@
-!(function t(e, i, r) {
+var minRtest = 10;
+var maxRtest = 20;
+// var r = Z[e.getAttribute("data-weather")];
+var r=0;
+
+
+
+
+
+
+ !(function t(e, i, r) {
     function n(o, a) {
         if (!i[o]) {
             if (!e[o]) {
@@ -7856,7 +7866,7 @@
                                             return new Date().getTime();
                                         },
                                     k = j();
-                                for (o = ["ms", "moz", "webkit", "o"], a = o.length; --a > -1 && !S; ) (S = t[o[a] + "RequestAnimationFrame"]), (O = t[o[a] + "CancelAnimationFrame"] || t[o[a] + "CancelRequestAnimationFrame"]);
+                                for (o = ["ms", "moz", "webkit", "o"], a = o.length; --a > -1 && !S; ) (S = t[o[a] + "RequestAnimationFrame"]), (O = t[o[a] + "CancelAnimationFrame"] || t[o[a] + "CancelRequestAnimationFrame"]); //ANNA
                                 x("Ticker", function (t, e) {
                                     var i,
                                         r,
@@ -8779,6 +8789,7 @@
                         (t.img = s),
                             s.addEventListener("load", function (n) {
                                 "function" == typeof i && i.call(null, s, e), r(t);
+                                console.log("loadedANNA");
                             }),
                             (s.src = t.src);
                     });
@@ -8815,8 +8826,8 @@
                     (0, y["default"])([ // ANNA Hintergrundbilder
                         { name: "dropAlpha", src: "img/drop-alpha.png" },
                         { name: "dropColor", src: "img/drop-color.png" }, //ANNA
-                        { name: "textureRainFg", src: "img/weather/skin.jpg" },
-                        { name: "textureRainBg", src: "img/weather/skin.jpg" },
+                        { name: "textureRainFg", src: "img/skin.jpg" },
+                        { name: "textureRainBg", src: "img/skin.jpg" },
                     ]).then(function (t) {
                         (O = t.textureRainFg.img),
                             (j = t.textureRainBg.img),
@@ -8873,7 +8884,7 @@
                 }
                 function u() {
                     c(),
-                        window.addEventListener("hashchange", function (t) {
+                        window.addEventListener("hashchange", function (t) { //ANNA KEY FUNCTION UM EVENT ZU REGISTRIEREN
                             h();
                         }),
                         h();
@@ -8882,6 +8893,7 @@
                     function t(t) {
                         return Object.assign({}, e, t);
                     }
+
                     var e = {
                         raining: !0, //ANNA Standard wenn nichts anderes vorgegeben?
                         minR: 20,
@@ -8901,7 +8913,7 @@
                     };
                     Z = { //ANNAMAIN
                         //1
-                        rain: t({ minR: 200, maxR: 400, rainChance: 0.35, dropletsRate: 20, trailRate: 4, fg: A, bg: M, collisionRadiusIncrease: 0  }),
+                        rain: t({ minR: minRtest, maxR: maxRtest, rainChance: 0.35, dropletsRate: 20, trailRate: 4, collisionRadiusIncrease: 0  }),
                         //4
                         storm: t({ maxR: 55, rainChance: 0.4, dropletsRate: 80, dropletsSize: [3, 5.5], trailRate: 2.5, trailScaleRange: [0.25, 0.4] }),
                         //5
@@ -8916,8 +8928,9 @@
                     var t = window.location.hash,
                         e = null,
                         i = null;
-                    "" != t && (e = document.querySelector(t)), null == e && ((e = document.querySelector(".slide")), (t = "#" + e.getAttribute("id"))), (i = document.querySelector("[href='" + t + "']"));
-                    var r = Z[e.getAttribute("data-weather")]; //ANNA weather switch
+                    "" != t && (e = document.querySelector(t)), null == e && ((e = document.querySelector(".slide")), (t = "#" + e.getAttribute("id"))), (i = document.querySelector("[href='" + t + "']")); //ANNA hashchange t ist href link i=slide-2
+                    r = Z[e.getAttribute("data-weather")]; //ANNA weather switch
+                    // var r = Z[e.getAttribute("data-weather")]; //ANNA weather switch original
                     (K = r),
                         (G.options = Object.assign(G.options, r)),
                         G.clearDrops(),
@@ -9536,3 +9549,27 @@
     {},
     [207]
 );
+
+
+const myText = document.querySelectorAll('.grad6');
+
+observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0) {
+      minRtest = 200;
+      maxRtest = 400;
+      console.log('in the view');
+      r = Math.floor(Math.random() * 3) + 0;
+      i= "slide-3";
+
+    } else {
+      minRtest = 10;
+      maxRtest = 20;
+      console.log('out of view');
+    }
+  });
+});
+
+myText.forEach(textblock => {
+  observer.observe(textblock);
+});

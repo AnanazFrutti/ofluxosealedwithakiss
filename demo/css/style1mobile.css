@@ -1,0 +1,205 @@
+body {
+    height: 100%;
+    margin: 0;
+    top:0;
+    overflow-x: hidden;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.startLoad {
+    font-family: "Lucida Console", Monaco, monospace;
+    color: #ffd6c4;
+    /* text-align: center; */
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.startImage {
+    position: fixed;
+    top:0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #ffe6db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.scriptfont {
+    font-family: 'Tangerine', cursive;
+    font-size: 44px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.monofont {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 18px;
+    line-height:140%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.grad-1 {
+    color: #ae5b5b;
+}
+
+.grad0 {
+    color: #ae5b5b;
+}
+
+.grad1 {
+    background-image:linear-gradient(0deg,#720000,#b9471a,#ae5b5b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.grad2 {
+    background-image: linear-gradient(180deg,#ce9370,  #dfc1bf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.grad3 {
+    background-image: linear-gradient(180deg,#dfc1bf, #b75f3c, #fff2e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.grad4 {
+    background-image: linear-gradient(180deg,#fff2e0, #de7e7e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.grad5 {
+    background-image: linear-gradient(180deg,#de7e7e, #ffcfc9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.grad6 {
+    background-image: linear-gradient(0deg,#d06868, #6b1c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.grad7 {
+    background-image: linear-gradient(180deg,#d06868, #6b1c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.grad8 {
+    background-image: linear-gradient(0deg, #752201, #6b1c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.grad9 {
+    background-image: linear-gradient(180deg,#fff4ef, #c87351, #ff00d9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+.gradCredits {
+    background-image:linear-gradient(0deg,#ff00d9,#ff00d9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.mainContainer{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f0b7a1+0,8c3310+24,752201+45,752201+45,d8aea4+61,d8aea4+72,752201+88,211403+100 */
+    background: #f0b7a1; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f0b7a1 0%, #8c3310 24%, #752201 45%, #752201 45%, #d8aea4 61%, #d8aea4 72%, #752201 88%, #211403 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #f0b7a1 0%,#8c3310 24%,#752201 45%,#752201 45%,#d8aea4 61%,#d8aea4 72%,#752201 88%,#211403 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #f0b7a1 0%,#8c3310 24%,#752201 45%,#752201 45%,#d8aea4 61%,#d8aea4 72%,#752201 88%,#211403 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', endColorstr='#211403',GradientType=0 ); /* IE6-9 */
+
+    opacity: .55;
+    background-repeat: no-repeat;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.containerText{
+    width:90%;
+    margin-top: 0;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.imageContainer > img {
+    /* position:relative;
+    left: 10%;
+    top: -5%;*
+    width:100%; */
+    width: 100vw;
+    position: relative;
+    left: calc(-100vw + 100%);
+    top: -5%;
+    margin-top: -200px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.centered {
+    text-align: center;
+}
+
+.small {
+    font-size: 11px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.slideshow {
+    position: fixed;
+    top:0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.container{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+}
+
+.container > img {
+    object-fit: cover;
+    width: 100%;
+}
+
+
+.superscript {
+    font-size:50%;
+    vertical-align:super;
+    line-height: 100%;
+}
