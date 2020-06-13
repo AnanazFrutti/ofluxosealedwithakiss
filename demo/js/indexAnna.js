@@ -1,10 +1,34 @@
-var minRtest = 10;
-var maxRtest = 20;
-// var r = Z[e.getAttribute("data-weather")];
-var r=0;
+// var minRtest = 20;
+// var maxRtest= 20;
+// // var r = Z[e.getAttribute("data-weather")];
+// var r=0;
 
 
+const myText = document.querySelectorAll('.grad6');
 
+observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0) {
+      // minRtest = 200;
+      // maxRtest = 400;
+      console.log('in the view');
+      // r = Math.floor(Math.random() * 3) + 0;
+      window.location.hash = '#slide-1';
+      console.log(window.location.hash);
+
+    } else {
+      // minRtest = 10;
+      // maxRtest = 20;
+      console.log('out of view');
+      window.location.hash = '#slide-5';
+      console.log(window.location.hash);
+    }
+  });
+});
+
+myText.forEach(textblock => {
+  observer.observe(textblock);
+});
 
 
 
@@ -8912,24 +8936,21 @@ var r=0;
                         collisionRadiusIncrease: 2e-4,
                     };
                     Z = { //ANNAMAIN
-                        //1
-                        rain: t({ minR: minRtest, maxR: maxRtest, rainChance: 0.35, dropletsRate: 20, trailRate: 4, collisionRadiusIncrease: 0  }),
-                        //4
-                        storm: t({ maxR: 55, rainChance: 0.4, dropletsRate: 80, dropletsSize: [3, 5.5], trailRate: 2.5, trailScaleRange: [0.25, 0.4] }),
-                        //5
+                        rain: t({ minR: 200, maxR: 400, rainChance: 0.35, dropletsRate: 20, trailRate: 4, collisionRadiusIncrease: 0 }),
+                        storm: t({ minR: 10, maxR: 20, rainChance: 0.4, dropletsRate: 20, dropletsSize: [3, 5.5], trailRate: 1, fg: O, bg: j, flashFg: k, flashBg: R, flashChance: 0.1 }),
                         fallout: t({ minR: 30, maxR: 60, rainChance: 0.35, dropletsRate: 20, trailRate: 4, fg: A, bg: M, collisionRadiusIncrease: 0 }),
-                        //2
                         drizzle: t({ minR: 10, maxR: 40, rainChance: 0.15, rainLimit: 2, dropletsRate: 10, dropletsSize: [3.5, 6], fg: F, bg: E }),
-                        //3
-                        sunny: t({ minR: 100, maxR: 2000, rainChance: 0.05, dropletsRate: 10, dropletsSize: [10, 8], rainLimit: 0, droplets: 10, raining: !0, fg: 0, bg: D, collisionRadiusIncrease: 0  }),
+                        sunny: t({ rainChance: 0, rainLimit: 0, droplets: 0, raining: !1, fg: C, bg: D }),
                     };
                 }
                 function h() {
+                  console.log("h wird ausgeführt");
                     var t = window.location.hash,
                         e = null,
                         i = null;
+                        console.log("t"+t);
                     "" != t && (e = document.querySelector(t)), null == e && ((e = document.querySelector(".slide")), (t = "#" + e.getAttribute("id"))), (i = document.querySelector("[href='" + t + "']")); //ANNA hashchange t ist href link i=slide-2
-                    r = Z[e.getAttribute("data-weather")]; //ANNA weather switch
+                    var r = Z[e.getAttribute("data-weather")]; //ANNA weather switch
                     // var r = Z[e.getAttribute("data-weather")]; //ANNA weather switch original
                     (K = r),
                         (G.options = Object.assign(G.options, r)),
@@ -8945,10 +8966,10 @@ var r=0;
                                 },
                             }
                         );
-                    // var n = document.querySelector(".slide--current");
-                    // null != n && n.classList.remove("slide--current");
-                    // var s = document.querySelector(".nav-item--current");
-                    // null != s && s.classList.remove("nav-item--current"), e.classList.add("slide--current"), i.classList.add("nav-item--current");
+                    var n = document.querySelector(".slide--current");
+                    null != n && n.classList.remove("slide--current");
+                    var s = document.querySelector(".nav-item--current");
+                    null != s && s.classList.remove("nav-item--current"), e.classList.add("slide--current"), i.classList.add("nav-item--current");
                 }
                 function f(t, e, i, r) {
                     function n(n) {
@@ -9549,27 +9570,3 @@ var r=0;
     {},
     [207]
 );
-
-
-const myText = document.querySelectorAll('.grad6');
-
-observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.intersectionRatio > 0) {
-      minRtest = 200;
-      maxRtest = 400;
-      console.log('in the view');
-      r = Math.floor(Math.random() * 3) + 0;
-      i= "slide-3";
-
-    } else {
-      minRtest = 10;
-      maxRtest = 20;
-      console.log('out of view');
-    }
-  });
-});
-
-myText.forEach(textblock => {
-  observer.observe(textblock);
-});
