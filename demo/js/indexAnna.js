@@ -12,10 +12,8 @@ observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.intersectionRatio > 0) {
       window.location.hash = '#slide-1';
-      console.log(window.location.hash);
     } else {
       window.location.hash = '#slide-5';
-      console.log(window.location.hash);
     }
   });
 });
