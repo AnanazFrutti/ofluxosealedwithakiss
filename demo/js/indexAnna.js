@@ -1,7 +1,9 @@
-// var minRtest = 20;
-// var maxRtest= 20;
-// // var r = Z[e.getAttribute("data-weather")];
-// var r=0;
+var element = document.getElementsByClassName('startImage');
+
+setTimeout(function(){
+    $(".startImage").fadeOut("slow");
+}, 2000);
+
 
 
 const myText = document.querySelectorAll('.grad6');
@@ -9,17 +11,9 @@ const myText = document.querySelectorAll('.grad6');
 observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.intersectionRatio > 0) {
-      // minRtest = 200;
-      // maxRtest = 400;
-      console.log('in the view');
-      // r = Math.floor(Math.random() * 3) + 0;
       window.location.hash = '#slide-1';
       console.log(window.location.hash);
-
     } else {
-      // minRtest = 10;
-      // maxRtest = 20;
-      console.log('out of view');
       window.location.hash = '#slide-5';
       console.log(window.location.hash);
     }
@@ -8813,7 +8807,6 @@ myText.forEach(textblock => {
                         (t.img = s),
                             s.addEventListener("load", function (n) {
                                 "function" == typeof i && i.call(null, s, e), r(t);
-                                console.log("loadedANNA");
                             }),
                             (s.src = t.src);
                     });
@@ -8936,19 +8929,18 @@ myText.forEach(textblock => {
                         collisionRadiusIncrease: 2e-4,
                     };
                     Z = { //ANNAMAIN
-                        rain: t({ minR: 200, maxR: 400, rainChance: 0.35, dropletsRate: 20, trailRate: 4, collisionRadiusIncrease: 0 }),
-                        storm: t({ minR: 10, maxR: 20, rainChance: 0.4, dropletsRate: 20, dropletsSize: [3, 5.5], trailRate: 1, fg: O, bg: j, flashFg: k, flashBg: R, flashChance: 0.1 }),
+                        rain: t({ minR: 200, maxR: 400, rainChance: 0.35, dropletsRate: 10, trailRate: 1, collisionRadiusIncrease: 0 }),
+                        storm: t({ minR: 10, maxR: 20, rainChance: 0.4, dropletsRate: 20, dropletsSize: [3, 5.5], trailRate: 1 }),
                         fallout: t({ minR: 30, maxR: 60, rainChance: 0.35, dropletsRate: 20, trailRate: 4, fg: A, bg: M, collisionRadiusIncrease: 0 }),
                         drizzle: t({ minR: 10, maxR: 40, rainChance: 0.15, rainLimit: 2, dropletsRate: 10, dropletsSize: [3.5, 6], fg: F, bg: E }),
                         sunny: t({ rainChance: 0, rainLimit: 0, droplets: 0, raining: !1, fg: C, bg: D }),
                     };
                 }
                 function h() {
-                  console.log("h wird ausgeführt");
+                  // console.log("h wird ausgeführt");
                     var t = window.location.hash,
                         e = null,
                         i = null;
-                        console.log("t"+t);
                     "" != t && (e = document.querySelector(t)), null == e && ((e = document.querySelector(".slide")), (t = "#" + e.getAttribute("id"))), (i = document.querySelector("[href='" + t + "']")); //ANNA hashchange t ist href link i=slide-2
                     var r = Z[e.getAttribute("data-weather")]; //ANNA weather switch
                     // var r = Z[e.getAttribute("data-weather")]; //ANNA weather switch original

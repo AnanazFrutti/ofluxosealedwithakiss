@@ -9,6 +9,14 @@ p {
     padding: 0;
 }
 
+a {color: #ff00d9;}
+a:link { color: #ff00d9; }
+a:visited { color: #ff00d9; }
+a:hover { text-decoration: underline; }
+a:focus { color: #ff00d9; }
+a:active { color: #ff00d9; }
+a:visited:hover{color: #ff00d9; }
+
 .startLoad {
     font-family: "Lucida Console", Monaco, monospace;
     color: #ffd6c4;
@@ -106,7 +114,7 @@ p {
 }
 
 .grad4 {
-    background-image: linear-gradient(180deg,#de7e7e, #de7e7e);
+    background-image: linear-gradient(0deg,#de7e7e, #d6bb8f);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -135,17 +143,18 @@ p {
     -webkit-text-fill-color: transparent;
 }
 
+
 .grad9 {
-    background-image: linear-gradient(180deg,#de7e7e, #ce9370, #ffd6c4);
+    background-image: linear-gradient(180deg,#720000, #8c320e,#ff00d9);
+    /* background-image: linear-gradient(180deg,#de7e7e, #ce9370, #ffd6c4); */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .gradCredits {
-    background-image:linear-gradient(0deg,#ff00d9,#ff00d9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ff00d9;
 }
+
 
 
 /* gradient background */
@@ -159,7 +168,7 @@ background: linear-gradient(to bottom,  #f0b7a1 0%,#702b0d 22%,#000000 50%,#823e
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', endColorstr='#d6a48f',GradientType=0 ); /* IE6-9 */
 
 
-    opacity: .6;
+    opacity: .7;
     background-repeat: no-repeat;
     padding-top: 10%;
     padding-bottom: 10%;
@@ -212,13 +221,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', end
         padding-bottom: 50px;
     }
 
-    .small {
+    .small, .startLoad  {
         font-size: 11px;
     }
 
     .containerText{
         width:90%;
     }
+
 
 }
 
@@ -238,7 +248,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', end
     }
 
 
-    .small {
+    .small, .startload {
         font-size: 12px;
     }
 
@@ -264,7 +274,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', end
     }
 
 
-    .small {
+    .small, .startLoad  {
         font-size: 13px;
     }
 
@@ -291,7 +301,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', end
         padding-bottom: 80px;
     }
 
-    .small {
+    .small, .startLoad  {
         font-size: 14px;
     }
 
@@ -322,7 +332,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', end
         width:45%;
     }
 
-    .small {
+    .small, .startLoad  {
         font-size: 14px;
     }
 
@@ -345,7 +355,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', end
         width:35%;
     }
 
-    .small {
+    .small, .startLoad  {
         font-size: 14px;
     }
 
