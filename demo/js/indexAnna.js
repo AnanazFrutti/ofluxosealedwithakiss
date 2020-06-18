@@ -8841,8 +8841,8 @@ myText.forEach(textblock => {
                     (0, y["default"])([ // ANNA Hintergrundbilder
                         { name: "dropAlpha", src: "img/drop-alpha.png" },
                         { name: "dropColor", src: "img/drop-color.png" }, //ANNA
-                        { name: "textureRainFg", src: "img/skin.jpg" },
-                        { name: "textureRainBg", src: "img/skin.jpg" },
+                        { name: "textureRainFg", src: "img/skin2.jpg" },
+                        { name: "textureRainBg", src: "img/skin2.jpg" },
                     ]).then(function (t) {
                         (O = t.textureRainFg.img),
                             (j = t.textureRainBg.img),
