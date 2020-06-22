@@ -1278,7 +1278,7 @@ myText.forEach(textblock => {
             function (t, e, i) {
                 var r = t("./$.global"),
                     n = t("./$.hide"),
-                    s = t("./$.uid")("src"),
+                    s = t("./$.uid")("src"), //ANNA
                     o = "toString",
                     a = Function[o],
                     l = ("" + a).split(o);
